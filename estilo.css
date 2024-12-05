@@ -1,0 +1,182 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #f0f0f0; /* Texto claro para contraste com fundo preto */
+    background-color: #121212; /* Fundo preto */
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #00aaff; /* Título em azul */
+}
+
+header p {
+    font-size: 1.2em;
+    color: #cccccc; /* Subtítulo em cinza claro */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 20px;
+    background: #00aaff; /* Barra de navegação azul */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #121212; /* Texto preto no menu */
+    font-weight: bold;
+    transition: color 0.3s ease;
+    margin: 15px;
+}
+
+nav ul li a:hover {
+    color: #ffffff; /* Texto branco ao passar o mouse */
+}
+
+main section {
+    margin-bottom: 20px;
+    background: #1a1a1a; /* Seção em cinza escuro */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra mais suave */
+    border: 2px solid #00aaff; /* Borda azul */
+}
+
+main section h2 {
+    margin-bottom: 10px;
+    color: #00aaff; /* Títulos em azul */
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #666666; /* Texto do rodapé em cinza */
+    font-size: 0.9em;
+}
+
+/* Animação Tópicos */
+main section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+main section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animação ícones */
+h2 i {
+    margin-right: 10px;
+    color: #00aaff;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+h2 i:hover {
+    transform: scale(1.2);
+    color: #ff7f50;
+}
+
+/* Foto de Perfil */
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaço entre a imagem e o texto */
+    justify-content: center;
+}
+
+.perfil img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00aaff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.perfil img:hover {
+    transform: scale(1.15); /* Zoom ao passar o mouse */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column; /* Menu vertical em telas menores */
+        padding: 20px 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    main section {
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+
+    .perfil img {
+        width: 150px; /* Menor tamanho da imagem */
+        height: 150px;
+    }
+
+    main section h2 {
+        font-size: 1.5rem; /* Reduz o tamanho do título nas seções */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .perfil img {
+        width: 120px; /* Imagem menor para telas muito pequenas */
+        height: 120px;
+    }
+
+    main section {
+        padding: 8px;
+    }
+
+    footer {
+        font-size: 0.7em;
+    }
+
+    main section h2 {
+        font-size: 1.2rem;
+    }
+}
